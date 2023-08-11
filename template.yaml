@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1beta1
+kind: Template
+metadata:
+  name: my-service
+  title: My Service Template
+  description: Creates a new service using our company standards.
+spec:
+  owner: team-name
+  type: service
+  templater: cookiecutter
+  path: ./template
+  schema:
+    required: ["assert_id", "name"]
+    properties:
+      assert_id:
+        title: Assert ID
+        type: string
+        description: Unique identifier for the assert.
+      name:
+        title: Name
+        type: string
+        description: Name of the assert.
